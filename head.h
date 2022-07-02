@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <list>
+#pragma comment(lib,"ws2_32.lib") //error LNK2019: 无法解析的外部符号 问题的解决办法
 using namespace std;
 
 #define MAX_BUF_SIZE 1024		   /* Max buffer size */
@@ -23,7 +24,10 @@ typedef struct
 } ID_Trans_Unit;
 
 int debug_level = 0;				 /* Debug level */
-char DNS_Server_IP[16] = "10.3.9.45"; /* Extern DNS server IP default value */
+
+/* Extern DNS server IP default value */
+//char DNS_Server_IP[16] = "10.3.9.45"; // 北邮dns服务器ip
+char DNS_Server_IP[16] = "192.168.1.1"; // 慧博园dns服务器ip
 
 ID_Trans_Unit ID_Trans_Table[MAX_ID_TRANS_TABLE_SIZE]; /* ID transfer table */
 int ID_Count = 0;									   /* Size of ID transfer table */

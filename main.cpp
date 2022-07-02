@@ -329,7 +329,7 @@ int main(int argc, char *argv[])
 {
     disp_head(); /* 打印标题、作者信息 */
 
-    /* Read and process the parameters user provided */
+    /* 处理管理员用户传入参数功能函数。此函数用于在控制台运行该系统时，输入调试信息 */
     Process_Parameters(argc, argv);
 
     /* Initialize the ID transfer table */
